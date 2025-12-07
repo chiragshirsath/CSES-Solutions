@@ -1,2 +1,3 @@
 # CSES-Solutions
-CSES problemset questions intutions and c++ solutions
+CSES problemset c++ solutions
+with questuon explanation, my intutuion,solution and better solutions i found
