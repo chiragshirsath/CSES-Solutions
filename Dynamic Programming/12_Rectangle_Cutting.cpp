@@ -1,13 +1,13 @@
 /*
-Question :  
-input :  
-output : 
-intution : 
-soln : 
+Question : cut a axb rectangle into squares using minimum no of cuts
+input : dimensions a,b <=500
+output : minimum no of cuts
+intution : if a==b already a square 0 cuts, else try all horizontal and vertical cuts and take minimum
+soln : for each rectangle try cutting at every possible horizontal and vertical position and take min of all
 
-state : 
-transition : 
-initialization :
+state : dp[i][j] = min cuts to make ixj rectangle into squares
+transition : dp[i][j] = min(1+dp[k][j]+dp[i-k][j] for k=1..i-1, 1+dp[i][k]+dp[i][j-k] for k=1..j-1)
+initialization : dp[i][i]=0 (already square), dp[1][j]=j-1, dp[i][1]=i-1
 */
 
 

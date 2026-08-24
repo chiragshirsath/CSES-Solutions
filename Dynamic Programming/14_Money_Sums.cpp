@@ -1,13 +1,13 @@
 /*
-Question :  
-input :  
-output : 
-intution : 
-soln : 
+Question : find all possible sums using given coins (each coin used atmost once)
+input : n coins <=100 with values <=1000
+output : all possible sums in increasing order
+intution : similar to subset sum, for each coin mark new sums that become possible
+soln : use boolean dp, for each coin iterate backwards and mark sum+coin[i] as possible if sum was possible
 
-state : 
-transition : 
-initialization :
+state : poss[s] = true if sum s is achievable
+transition : poss[j+arr[i]] = true if poss[j] is true
+initialization : poss[0] = true
 */
 
 

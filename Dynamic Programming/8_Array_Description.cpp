@@ -3,11 +3,11 @@ Question : array that can contain values 1 to m and diff btw 2 adjacent values i
 input :  array size n<=1e5, upperbound value for array elements m<=100 , 0<= n integers <=m
 output : number of arrays formed after filling missing values
 intution : going element one by one and calculate ans for array of size 0<=i<=n ending with 1<=x<=m
-soln : 
+soln : for each position if its 0 we try all values 1 to m if not we use the given value, dp counts ways for subarrays ending with each value
 
-state : 
-transition : 
-initialization :
+state : dp[i][x] no of valid arrays of size i+1 ending with value x
+transition : dp[i][x] = dp[i-1][x] + dp[i-1][x-1] + dp[i-1][x+1] (if arr[i]==0 or arr[i]==x)
+initialization : dp[0][arr[0]]=1 if arr[0]!=0, else dp[0][1..m]=1
 */
 
 

@@ -1,13 +1,9 @@
 /*
-Question :  
-input :  
-output : 
-intution : 
-soln : 
-
-state : 
-transition : 
-initialization :
+Question : find the length of longest mountain subsequence where each element is visible from both sides (no taller element between it and its nearest taller neighbors)
+input : n <=2e5, n heights
+output : length of longest mountain range
+intution : for each element find next greater on right and prev greater on left, process elements in decreasing order of height
+soln : using stack find next/prev greater elements, sort by height descending and dp[i] = max(dp[next_greater], dp[prev_greater]) + 1
 */
 
 

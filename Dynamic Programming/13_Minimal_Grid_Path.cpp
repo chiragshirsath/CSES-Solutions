@@ -1,13 +1,9 @@
 /*
-Question :  
-input :  
-output : 
-intution : 
-soln : 
-
-state : 
-transition : 
-initialization :
+Question : find the lexicographically smallest path from top-left to bottom-right in nxn grid moving only down or right
+input : grid size n <=1000, nxn characters
+output : the lexicographically smallest path string
+intution : greedy bfs, at each step from all current positions pick the minimum char available in next possible cells
+soln : maintain set of current positions, at each step find min char among all possible next moves (down/right), keep only positions that lead to that min char, repeat till we reach bottom-right
 */
 
 

@@ -1,13 +1,13 @@
 /*
-Question :  
-input :  
-output : 
-intution : 
-soln : 
+Question : count no of ways to divide numbers 1 to n into 2 sets with equal sum
+input : n <=500
+output : no of ways modulo 1e9+7
+intution : total sum must be even, then its like counting subsets with sum = total/2 using numbers 1 to n, divide by 2 as both sets are interchangeable
+soln : knapsack dp to count subsets with target sum, divide result by 2 using modular inverse
 
-state : 
-transition : 
-initialization :
+state : dp[s] = no of subsets with sum s
+transition : dp[j+i] += dp[j] for each number i from 1 to n (iterate j backwards)
+initialization : dp[0] = 1
 */
 
 

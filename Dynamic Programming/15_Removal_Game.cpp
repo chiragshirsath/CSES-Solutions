@@ -1,13 +1,13 @@
 /*
-Question :  
-input :  
-output : 
-intution : 
-soln : 
+Question : 2 players take turns removing from either end of array, both play optimally, find max score of player 1
+input : n <=5000, n integers
+output : maximum score player 1 can get
+intution : each player wants to maximize their own score, so relative advantage matters, at each turn pick the end that gives max advantage over opponent
+soln : dp on intervals, dp[i][j] = max(score_you - score_opponent) for subarray i to j, pick left or right and subtract opponents best play
 
-state : 
-transition : 
-initialization :
+state : dp[i][j] = max advantage (your score - opponent score) for subarray a[i..j]
+transition : dp[i][j] = max(a[i] - dp[i+1][j], a[j] - dp[i][j-1])
+initialization : dp[i][i] = a[i]
 */
 
 

@@ -1,13 +1,13 @@
 /*
-Question :  
-input :  
-output : 
-intution : 
-soln : 
+Question : find the longest common subsequence of 2 arrays and print it 
+input : array sizes n,m <=1000 and n,m integers
+output : length and the subsequence
+intution : classic lcs dp, if elements match extend lcs else take max of excluding either element
+soln : 2d dp for lcs length then backtrack to find the actual subsequence
 
-state : 
-transition : 
-initialization :
+state : dp[i][j] = length of lcs of first i elements of a and first j elements of b
+transition : if a[i-1]==b[j-1] dp[i][j]=1+dp[i-1][j-1] else dp[i][j]=max(dp[i-1][j],dp[i][j-1])
+initialization : dp[0][j]=0, dp[i][0]=0
 */
 
 
